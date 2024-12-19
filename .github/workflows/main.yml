@@ -24,7 +24,7 @@ jobs:
       run: pip install pytest requests
 
     - name: Run tests
-      run: pytest tests/test-api.py
+      run: pytest -v --tb=no tests/test-api.py
 
     - name: Stop containers
       if: always()
