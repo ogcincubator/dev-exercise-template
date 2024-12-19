@@ -11,13 +11,12 @@ This proof of concept, shows how GitHub actions can be setup to test a OGC API p
 ### Developer Workflow
 
 * Fork a template repository similar to this one, which should contain a blank docker compose and pygeoapi config file.
-* Create a PR to the upstream repo, which should triigger the GitHub actions.
-* Wait for the tests to pass
+* Create a PR to the upstream repo, which should trigger the GitHub actions.
+* Wait for the tests to pass.
 
 ### GitHub Actions
 
-* Start the services on the docker compose file
+* Start the services on the docker compose file.
 * Run tests to check if the server is up & running, and if the features collections endpoint responds.
-* Stop the services on the docker compose file
+* Stop the services on the docker compose file.
 * If any tests fail, there will be info in the Actions log.
-  
