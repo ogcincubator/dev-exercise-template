@@ -152,5 +152,5 @@ resources:
         providers:
             - type: feature
               name: GeoJSON
-              data: /data/hyderabad/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
+              data: /data/greater_hyderabad_municipal_corporation_ward_Boundaries.geojson
               id_field: id
