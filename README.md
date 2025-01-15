@@ -11,8 +11,10 @@ This proof of concept, shows how GitHub actions can be setup to test a OGC API p
 ### Developer Workflow
 
 * Fork a template repository similar to this one, which should contain a blank docker compose and pygeoapi config file.
-* Create a PR to the upstream repo, which should trigger the GitHub actions.
-* Wait for the tests to pass.
+* If necessary, enable GitHub actions on the fork.
+* Do the necessary changes to docker-compose.yml and the pygeoapi configuration file.
+* Push the changes to the fork and wait for the tests to pass.
+* You can also test the GitHub actions locally, using [act](https://github.com/nektos/act)
 
 ### GitHub Actions
 
