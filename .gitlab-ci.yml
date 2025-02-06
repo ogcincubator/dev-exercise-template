@@ -4,4 +4,4 @@ stages:
 test:
   stage: test
   script:
-    - docker compose up -d --build
+    - docker-compose up -d --build
