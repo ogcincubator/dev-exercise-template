@@ -3,12 +3,15 @@ stages:
 
 before_script:
   - apk add --no-cache python3 py3-pip docker-compose
+  - python3 -m venv venv
+  - source venv/bin/activate
   - pip3 install pytest requests
 
 test:
   stage: test
   script:
     - docker-compose -f "docker-compose.yml" up -d --build
+    - source venv/bin/activate
     - pytest -v --tb=no tests/test-api.py
   after_script:
     - docker-compose -f "docker-compose.yml" down
