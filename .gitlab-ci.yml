@@ -6,7 +6,7 @@ variables:
   DOCKER_HOST: "tcp://docker:2375"
 
 before_script:
-  - apt-get update && apt-get install -y python3-pip docker-compose || apk add --no-cache python3 py3-pip docker-compose
+  - apk add --no-cache python3 py3-pip docker-compose
   - python3 -m venv venv
   - source venv/bin/activate
   - pip install --no-cache-dir pytest requests
