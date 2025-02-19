@@ -3,6 +3,7 @@ stages:
 
 variables:
   DOCKER_REGISTRY_USER: "dockerathush"
+  DOCKER_REGISTRY_PASS: "EHE!guc4mpm!hqz8rey"
 # Build stage: Builds the Docker images
 build:
   stage: build
@@ -11,7 +12,7 @@ build:
     - docker:19.03.12-dind  # Docker-in-Docker for building images inside the CI pipeline
   before_script:
     - docker-compose --version  # Check Docker Compose version
-    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password-stdin
+    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password $DOCKER_REGISTRY_PASS
   script:
     - docker-compose -f docker-compose.yml up -d  # Start the services in detached mode
   after_script:
