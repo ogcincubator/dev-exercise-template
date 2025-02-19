@@ -9,7 +9,6 @@ build:
   services:
     - docker:19.03.12-dind  # Docker-in-Docker for building images inside the CI pipeline
   before_script:
-    - docker info  # Check Docker setup
     - docker-compose --version  # Check Docker Compose version
   script:
     - docker-compose -f docker-compose.yml build  # Build Docker images defined in docker-compose.yml
