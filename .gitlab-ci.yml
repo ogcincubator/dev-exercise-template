@@ -23,8 +23,3 @@ test:
   after_script:
     - docker-compose -f "$DOCKER_COMPOSE_FILE" down
   timeout: 10m
-  tags:
-    - docker
-  only:
-    refs:
-      - master
