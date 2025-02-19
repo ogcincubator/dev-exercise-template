@@ -12,8 +12,8 @@ build:
     - docker:19.03.12-dind  # Docker-in-Docker for building images inside the CI pipeline
   before_script:
     - docker-compose --version  # Check Docker Compose version
-    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password $DOCKER_REGISTRY_PASS
   script:
+    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password $DOCKER_REGISTRY_PASS
     - docker-compose -f docker-compose.yml up -d  # Start the services in detached mode
   after_script:
     - docker-compose -f docker-compose.yml down
