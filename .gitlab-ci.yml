@@ -1,6 +1,8 @@
 stages:
   - build
 
+variables:
+  DOCKER_REGISTRY_USER: "dockerathush"
 # Build stage: Builds the Docker images
 build:
   stage: build
