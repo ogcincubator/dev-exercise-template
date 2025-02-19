@@ -1,10 +1,6 @@
 stages:
   - build
 
-variables:
-  DOCKER_REGISTRY_USER: "dockerathush"
-  DOCKER_REGISTRY_PASS: "EHE!guc4mpm!hqz8rey"
-# Build stage: Builds the Docker images
 build:
   stage: build
   image: docker:latest
@@ -13,7 +9,6 @@ build:
   before_script:
     - docker-compose --version  # Check Docker Compose version
   script:
-    - echo "$DOCKER_REGISTRY_PASS" | docker login $DOCKER_REGISTRY --username $DOCKER_REGISTRY_USER --password $DOCKER_REGISTRY_PASS
     - docker-compose -f docker-compose.yml up -d  # Start the services in detached mode
   after_script:
     - docker-compose -f docker-compose.yml down
