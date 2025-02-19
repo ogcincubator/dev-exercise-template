@@ -1,0 +1,31 @@
+stages:
+  - build
+  - deploy
+
+# Build stage: Builds the Docker images
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:19.03.12-dind  # Docker-in-Docker for building images inside the CI pipeline
+  before_script:
+    - docker info  # Check Docker setup
+    - docker-compose --version  # Check Docker Compose version
+  script:
+    - docker-compose -f docker-compose.yml build  # Build Docker images defined in docker-compose.yml
+  artifacts:
+    paths:
+      - .docker  # Optional: Save build artifacts if needed
+
+# Deploy stage: Start Docker Compose services
+deploy:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:19.03.12-dind
+  before_script:
+    - docker-compose --version  # Check Docker Compose version
+  script:
+    - docker-compose -f docker-compose.yml up -d  # Start the services in detached mode
+  only:
+    - master  # Run deploy on the master branch
