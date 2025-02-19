@@ -2,6 +2,7 @@ variables:
   DOCKER_DRIVER: overlay2
 
 stages:
+  - build
   - deploy
 
 image:
@@ -9,8 +10,13 @@ image:
 
 services:
   - docker:23.0.5-dind
-  
+
+compile:
+  stage: build
+  before_script:
+
 deploy:
   stage: deploy
+  before_script:
   script:
     - docker compose -f docker-compose.yml up -d
