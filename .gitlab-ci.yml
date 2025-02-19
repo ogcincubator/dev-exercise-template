@@ -8,10 +8,10 @@ before_script:
 test:
   stage: test
   script:
-    - docker-compose -f "docker-compose.yml" up -d --build
+    - docker compose -f "docker-compose.yml" up -d --build
     - pytest -v --tb=no tests/test-api.py
   after_script:
-    - docker-compose -f "docker-compose.yml" down
+    - docker compose -f "docker-compose.yml" down
   timeout: 10m
   only:
     refs:
