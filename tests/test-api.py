@@ -2,7 +2,8 @@ import pytest
 import requests
 
 base_url = 'http://localhost:5000'
-collection = 'http://localhost:5000/collections/hyderabad/items'
+collection = 'canada-hydat-daily-mean-02hc003'
+items = "{url}/collections/{name}/items".format(url=base_url, name=collection)
 
 # Check if the server is responding
 def test_server_responds():
@@ -13,10 +14,10 @@ def test_server_responds():
     except requests.exceptions.RequestException as e:
         pytest.fail(f'Server not responding: {e}')
 
-# Check if the hyderabad collection is published
+# Check if the  collection is published
 def test_collection_published():
     try:
-        response = requests.get(collection)
+        response = requests.get(items)
         assert response.status_code == 200
     except requests.exceptions.RequestException as e:
-        pytest.fail(f'Hyderabad collection not published: {e}')
+        pytest.fail(f'collection not published: {e}')

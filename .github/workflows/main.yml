@@ -37,7 +37,6 @@ jobs:
           iut=http://localhost:5000
           noofcollections=-1
 
-
     - name: Stop containers
       if: always()
       run: docker compose -f "docker-compose.yml" down
