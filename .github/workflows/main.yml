@@ -10,7 +10,7 @@ on:
 
 jobs:
   docker:
-    timeout-minutes: 10
+    timeout-minutes: 20
     runs-on: ubuntu-latest
 
     steps:
@@ -20,23 +20,24 @@ jobs:
     - name: Start containers
       run: docker compose -f "docker-compose.yml" up -d --build
 
-    # - name: Install requirements
-    #   run: pip install pytest requests
+    - name: Install requirements
+      run: pip install pytest requests
 
-    # - name: Run tests
-    #   run: pytest -v --tb=no tests/test-api.py
+    - name: Run tests
+      run: pytest -v --tb=no tests/test-api.py
 
-    # - name: Stop containers
-    #   if: always()
-    #   run: docker compose -f "docker-compose.yml" down
+    - name: Run team engine
+      run: docker run --rm -d --network=host ogccite/teamengine-production:1.0-SNAPSHOT
+            
+    - name: test ogcapi-features compliance
+      uses: OSGEO/cite-runner@main
+      with:
+        test_suite_identifier: ogcapi-features-1.0
+        test_session_arguments: >-
+          iut=http://localhost:5000
+          noofcollections=-1
 
-  perform-cite-testing:
-    runs-on: ubuntu-24.04
-    steps:
-      - name: test ogcapi-features compliancy
-        uses: OSGEO/cite-runner@main
-        with:
-          test_suite_identifier: ogcapi-features-1.0
-          test_session_arguments: >-
-            iut=http://localhost:5000
-            noofcollections=-1
+    - name: Stop containers
+      if: always()
+      run: docker compose -f "docker-compose.yml" down
+
