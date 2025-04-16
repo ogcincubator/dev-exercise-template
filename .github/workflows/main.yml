@@ -41,3 +41,6 @@ jobs:
       if: always()
       run: docker compose -f "docker-compose.yml" down
 
+    # - name: Stop teamengine
+    #   if: always()
+    #   run: docker stop teamengine && docker rm -f teamengine
