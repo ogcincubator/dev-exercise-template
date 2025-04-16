@@ -27,7 +27,7 @@ jobs:
       run: pytest -v --tb=no tests/test-api.py
 
     - name: Run team engine
-      run: docker run --rm -d --network=host ogccite/teamengine-production:1.0-SNAPSHOT
+      run: docker run -d --rm --network=host ogccite/teamengine-production:1.0-SNAPSHOT
             
     - name: test ogcapi-features compliance
       uses: OSGEO/cite-runner@main
