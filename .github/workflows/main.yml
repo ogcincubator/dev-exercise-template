@@ -36,7 +36,7 @@ jobs:
         test_session_arguments: >-
           iut=http://localhost:5000
           noofcollections=-1
-          output_format=markdown
+
 
     - name: Stop containers
       if: always()
