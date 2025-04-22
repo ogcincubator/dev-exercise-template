@@ -25,13 +25,7 @@ jobs:
 
     - name: Run tests
       run: pytest -v --tb=no tests/test-api.py
-
-    # - name: Clean teamengine container
-    #   run: docker stop teamengine || true && docker rm teamengine || true
-
-    # - name: Run team engine
-    #   run: docker run -d --rm --name=teamengine --network=host ogccite/teamengine-production:1.0-SNAPSHOT
-            
+          
     - name: test ogcapi-features compliance
       uses: OSGEO/cite-runner@main
       with:
