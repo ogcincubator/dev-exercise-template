@@ -26,3 +26,7 @@ This proof of concept, shows how GitHub actions can be setup to test a OGC API p
 * If any tests fail, there will be info in the Actions log.
 
 ![Developer Repos](./Dev_fork.png)
+
+### Tests
+
+Github actions are setup to run two sets of tests. The [python tests](./tests/test-api.py) are currently checking if the server is running and if a given collection is published, but they could test anything we want. The [compliance tests](https://github.com/OSGeo/cite-runner) use team engine underneath, and test for compliance of OGC API - Features, part 1 and 2. 
