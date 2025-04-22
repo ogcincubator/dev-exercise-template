@@ -27,7 +27,7 @@ jobs:
       run: pytest -v --tb=no tests/test-api.py
           
     - name: test ogcapi-features compliance
-      uses: OSGEO/cite-runner@main
+      uses: OSGeo/cite-runner@main
       with:
         test_suite_identifier: ogcapi-features-1.0
         test_session_arguments: >-
