@@ -2,10 +2,6 @@
 
 **This README file is aimed at implementers OGC API - Features (OAF). If your goal is to run the Module 3 assignment and publish data using OAF, please go to this [README](.README-publishers.md) file instead.**
 
-This folder contains the Module 3 assignment, which can be done using an OGC API implementation.
-
-The goal is to publish a vector dataset as OAF, and to run the [compliance tests](https://github.com/OSGeo/cite-runner) to validate the results.
-
 If you would like to add support to another implementation of OAF, please follow the instructions bellow. OGC welcomes any OAF implementations that fullfil the requirements bellow, regardless of their license model. 
 
 ## Add another OAF implementation
