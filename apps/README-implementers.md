@@ -17,6 +17,6 @@ Before starting, make sure that:
 3. Create a `docker-compose.yml` file on the root of that folder. That file should start the OGC API server, along with any other support services that may be required, and ingest and publish the dataset. If extra configuration parameters are needed (e.g.: license, credentials), it should be clearly explained how to obtain and use them. Additional configuration files can be placed on that folder, or sub-folders.
 4. Comment relevant parts of the `docker-compose.yml` file and/or configuration files. The user should uncomment these parts, in order to run the implementation.
 5. Create a `README` file on the root of that folder. Make sure that all the instructions to configure and run the implementation are clearly stated.
-6. Add your implementation to the Implementations section of the [README](README-implementers.md#implementations) file on this folder. 
+6. Add your implementation to the Implementations section of the [README](README-publishers.md#implementations) file on this folder. 
 7. Add a job for testing that implementation on [./github/workflows/main.yml](../.github/workflows/main.yml). This job should start the services on the `docker-compose.yml` file and run the [cite tests](https://github.com/OSGeo/cite-runner). You can see an example [here](../.github/workflows/main.yml#L12).
 8. After completing the steps bellow, please create a [Pull Request](https://github.com/ogcincubator/dev-exercise-template/pulls) to add an exercise with your implementation of OAF. We thank you in advance for your contribution! 🙏
