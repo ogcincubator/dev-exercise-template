@@ -9,7 +9,7 @@ on:
     - master
 
 jobs:
-  docker:
+  pygeoapi:
     timeout-minutes: 20
     runs-on: ubuntu-latest
 
@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Read Port
-      run: cat .env >> $GITHUB_ENV
+      run: cat ./apps/pygeoapi/.env >> $GITHUB_ENV
 
     - name: Check Port
       run: echo $PORT
@@ -27,11 +27,11 @@ jobs:
       run: docker compose -f "./apps/pygeoapi/docker-compose.yml" up -d --build
           
     - name: test ogcapi-features compliance
-      uses: OSGeo/cite-runner@v0.1.0 # TODO: change this later to match the latest release
+      uses: OSGeo/cite-runner@v0.1.4 # TODO: change this later to match the latest release
       with:
         test_suite_identifier: ogcapi-features-1.0
         test_session_arguments: iut=http://localhost:$PORT
 
     - name: Stop containers
       if: always()
-      run: docker compose -f "docker-compose.yml" down -v
+      run: docker compose -f "./apps/pygeoapi/docker-compose.yml" down -v
