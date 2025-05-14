@@ -1,23 +1,17 @@
-# README - Implementers of OGC API - Features 🚀
+# README - Publishers of OGC API - Features 🚀
 
-This folder contains the Module 3 assignment, which can be done using an OGC API implementation.
+**This README file is aimed at anyone who wants to complete the Module 3 assignment: publishing vector data using OGC API - Features (OAF). If your goal is to add another implementation of OAF to this folder, please go to this [README](.README-implementers.md) file instead.**
 
-The goal is to publish a vector dataset as OGC API - Features (OAF), and to run the [compliance tests](https://github.com/OSGeo/cite-runner) to validate the results.
-
-If you would like to add support to another implementation of OAF, please follow the instructions bellow. OGC welcomes any OAF implementations that fullfil the requirements bellow, regardless of their license model. 
-
-## Add another OAF implementation
+## Completing the Assignment
 
 Before starting, make sure that:
 
-- ✅ *The OAF implementation is dockerised. If the software is not available through docker hub or another docker repository, please add a folder with the Dockerfile so that it can be build by the user.*
-- ✅ *If a license is required, please state all the instructions in order to obtain and use that license.*
-- ✅ *You agree with the [LICENSE](../LICENSE) on this repository. Although your software may have a different license, the files to create and run the service, along with the instructions should share the main license of the repository.*
+- ✅ *You have docker and docker compose up and running in your machine.*
+- ✅ *You have access to a command line interface.*
+- ✅ *You have access to a text editor.*
 
-1. Create a folder with your implementation. This folder should be placed under [./apps](.) and named after your OAF implementation (see [./pygeoapi](./pygeoapi/) example for reference).
-2. Create a `data` sub folder within that folder, and place your vector dataset there, in a suitable format. The user should be able to ingest that format in the OGC API server, without additional processing. You are welcome to reuse [this](./pygeoapi/data/canada-hydat-daily-mean-02HC003.tinydb) dataset or to use a different one. 
-3. Create a `docker-compose.yml` file on the root of that folder. That file should start the OGC API server, along with any other support services that may be required, and ingest and publish the dataset. If extra configuration parameters are needed (e.g.: license, credentials), it should be clearly explained how to obtain and use them. Additional configuration files can be placed on that folder, or sub-folders.
-4. Comment relevant parts of the `docker-compose.yml` file and/or configuration files. The user should uncomment these parts, in order to run the implementation.
-5. Create a `README` file on the root of that folder. Make sure that all the instructions to configure and run the implementation are clearly stated.
-6. Add a job for testing that implementation on [./github/workflows/main.yml](../.github/workflows/main.yml). This job should start the services on the `docker-compose.yml` file and run the [cite tests](https://github.com/OSGeo/cite-runner). You can see [here](../.github/workflows/main.yml#L12) an example.
-7. After following the steps bellow, please create a [Pull Request](https://github.com/ogcincubator/dev-exercise-template/pulls) to add an exercise with your implementation of OAF. We thank you in advance for your contribution!
+## Implementations 
+
+Select one of the available implementations of OAF and switch to that folder, to continue the exercise:
+
+* [pygeoapi](./pygeoapi/)
