@@ -5,6 +5,7 @@ Please follow these steps to complete the Module 3 assignment.
 Before starting, make sure that:
 
 - ✅ *You have a GitHub account. Create one here: https://github.com/signup*
+- ✅ *You have git installed in your machine. Although you are welcome to use a git UI, the instructions provided here assume you will be using the command line interface.
 
 ## Create your repository
 
