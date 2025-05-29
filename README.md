@@ -38,6 +38,10 @@ You can check the results of the test, on the `Actions` tab of the repository.
 
 ![Check the output of the GitHub action](./img/github3.png)
 
+To submit your work for review by the OGC team, email them the url of your repository.
+
+### Troubleshooting
+
 If the GitHub action failed, there is probably something wrong with your setup. Try checking your configuration and run the server again. If you want to run the action locally, before pushing your results to the GitHub repository, you can use [act](https://github.com/nektos/act), replacing `foo` with the name of your job: 
 
 ```bash
