@@ -1,0 +1,27 @@
+# pygeoapi
+
+This repository contains the necessary files to standup an implementation of pygeoapi and publish the data on the [data](./data) folder.
+
+[pygeoapi](https://pygeoapi.io/) is a Python server implementation of the OGC API suite of standards. It is a Reference Implementation for OGC API - Features, OGC API - Tiles and OGC API - Environmental Data Retrieval, and compliance certified for OGC API - Processes.
+
+## Quick-Start
+
+Start the server with:
+
+```bash
+docker compose up
+```
+
+Or, if you want to run it in the background:
+
+```bash
+docker compose up -d
+```
+
+The landing page is available at: http://localhost:5000/
+
+```bash
+curl -I http://localhost:5000/
+```
+
+## About the Data
