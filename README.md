@@ -54,7 +54,7 @@ For instance, if you were testing a pygeoapi implementation:
 act -j pygeoapi
 ```
 
-## Note about Compliance
+## Note about Compliance 🏆
 
 This assignment tests if a server is compliant with OGC API Features - part 1 & 2. In order to be compliant, the server needs to pass at least the mandatory tests.
 
