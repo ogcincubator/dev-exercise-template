@@ -6,7 +6,7 @@
 
 Before starting, make sure that:
 
-- ✅ *You have docker and docker compose up and running in your machine.*
+- ✅ *You have [docker](https://docs.docker.com/) and [docker compose](https://docs.docker.com/compose/) up and running in your machine.*
 - ✅ *You have access to a command line interface.*
 - ✅ *You have access to a text editor.*
 
