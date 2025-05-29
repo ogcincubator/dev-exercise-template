@@ -28,4 +28,30 @@ cd data-publisher
 ```
 ## Complete the exercise
 
+Go to the [`apps`](./apps/) folder and choose one implementation from there. Specific instructions to run an OGC API server and publish data using that technology can be found on the implementation's folder.
+
 ## Submit your assignment
+
+After ensuring the dataset is published with the implementation you selected, commit your results and push them to GitHub to trigger the compliance test action. In order to pass the assignment you need to successfully pass the compliance tests, which means your setup can standup a valid OGC API - Features endpoint.
+
+You can check the results of the test, on the `Actions` tab of the repository.
+
+![Check the output of the GitHub action](./img/github3.png)
+
+If the GitHub action failed, there is probably something wrong with your setup. Try checking your configuration and run the server again. If you want to run the action locally, before pushing your results to the GitHub repository, you can use [act](https://github.com/nektos/act), replacing `foo` with the name of your job: 
+
+```bash
+act -j foo
+```
+
+For instance, if you were testing a pygeoapi implementation:
+
+```bash
+act -j pygeoapi
+```
+
+## Note about Compliance
+
+This assignment tests if a server is compliant with OGC API Features - part 1 & 2. In order to be compliant, the server needs to pass at least the mandatory tests.
+
+The compliance tests use the [cite-runner](https://github.com/OSGeo/cite-runner) and the [team-engine](https://github.com/opengeospatial/teamengine) projects. Find more about compliance and certification on the cite website: https://cite.opengeospatial.org/teamengine/
