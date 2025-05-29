@@ -28,4 +28,4 @@ curl -I http://localhost:5000/
 
 ## About the Data
 
-On the [data](./data) folder you will find an tinydb database containing daily mean of water level or flow. The daily mean is the average of all unit values for a given day. This dataset is provided by the [National Hydrological Service (NHS) of Canada](https://wateroffice.ec.gc.ca/).
+On the [data](./data) folder you will find an tinydb database containing daily means of water level or flow. The daily mean is the average of all unit values for a given day. This dataset is provided by the [National Hydrological Service (NHS) of Canada](https://wateroffice.ec.gc.ca/).
