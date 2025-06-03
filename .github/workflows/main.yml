@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
 
     - name: Set environment variable for port
       run: cat ./apps/pygeoapi/.env >> $GITHUB_ENV
@@ -25,10 +25,10 @@ jobs:
       run: docker compose -f "./apps/pygeoapi/docker-compose.yml" up -d --build
           
     - name: Test OGC API - Features compliance
-      uses: OSGeo/cite-runner@main # TODO: change this later to match the latest release
+      uses: OSGeo/cite-runner@0.2.0 # TODO: change this later to match the latest release
       with:
         test_suite_identifier: ogcapi-features-1.0
-        test_session_arguments: iut=http://localhost:$PORT
+        test_session_arguments: 'iut=http://localhost:5000 noofcollections=-1'
 
     - name: Stop containers
       if: always()
