@@ -20,10 +20,10 @@ Or, if you want to run it in the background:
 docker compose up -d
 ```
 
-The landing page is available at: http://localhost:5000/
+The landing page is available at: http://localhost:5001/
 
 ```bash
-curl -I http://localhost:5000/
+curl -I http://localhost:5001/
 ```
 
 ## About the Data

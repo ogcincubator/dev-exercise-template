@@ -1,4 +1,4 @@
-name: Test
+name: Test your OGC API ⚙️
 
 on:
   push:
@@ -15,18 +15,16 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@master
 
-    - name: Read Port
+    - name: Set environment variable for port
       run: cat ./apps/pygeoapi/.env >> $GITHUB_ENV
-
-    - name: Check Port
       run: echo $PORT
 
     - name: Start containers
       run: docker compose -f "./apps/pygeoapi/docker-compose.yml" up -d --build
           
-    - name: test ogcapi-features compliance
+    - name: Test OGC API - Features compliance
       uses: OSGeo/cite-runner@main # TODO: change this later to match the latest release
       with:
         test_suite_identifier: ogcapi-features-1.0
