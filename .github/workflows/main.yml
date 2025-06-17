@@ -19,6 +19,8 @@ jobs:
 
     - name: Set environment variable for port
       run: cat ./apps/pygeoapi/.env >> $GITHUB_ENV
+
+    - name: Check port
       run: echo $PORT
 
     - name: Start containers
