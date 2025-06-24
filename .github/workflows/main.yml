@@ -19,8 +19,8 @@ jobs:
 
     - name: Start pygeoapi
       run: |
-           export PHOST=http://pygeoapi:80 && docker compose -f "./apps/pygeoapi/docker-compose.yml" \
-           up -d --build
+           export PHOST=http://pygeoapi:80 && docker compose \
+           -f "./apps/pygeoapi/docker-compose.yml" up -d --build
           
     - name: Start teamengine
       run: |
