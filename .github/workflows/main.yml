@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4.2.2
 
     - name: Create network
       run: docker network create my-shared-network
@@ -26,7 +26,7 @@ jobs:
     - name: Start teamengine
       run: docker run -d --name=teamengine --add-host=host.docker.internal:host-gateway --publish=9080:8080 --network=my-shared-network ogccite/teamengine-production:1.0-SNAPSHOT
 
-    - name: "install cite-runner"
+    - name: "Install cite-runner"
       run: pipx install ogc-cite-runner
 
     - name: "Test OGC API - Features compliance"
