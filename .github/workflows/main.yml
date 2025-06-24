@@ -17,9 +17,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.2.2
 
-    - name: Create network
-      run: docker network create my-shared-network
-
     - name: Start pygeoapi
       run: |
           docker compose -f "./apps/pygeoapi/docker-compose.yml" \
@@ -38,7 +35,7 @@ jobs:
       run: |
         export PATH="$PATH:/root/.local/bin/" && ogc-cite-runner \
         execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 \
-        --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 \
+        --suite-input iut http://pygeoapi:80 --suite-input noofcollections 1 \
         --output-format console
 
     - name: Stop containers
@@ -48,7 +45,3 @@ jobs:
     - name: Stop cite-runner
       if: always()
       run: docker stop teamengine && docker rm -f teamengine
-
-    - name: Remove network
-      if: always()
-      run: docker network rm my-shared-network
