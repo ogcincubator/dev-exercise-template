@@ -36,7 +36,7 @@ jobs:
       run: pipx install ogc-cite-runner
 
     - name: "Test OGC API - Features compliance"
-      run: /root/.local/bin/ogc-cite-runner execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 --output-format markdown
+      run: export PATH="$PATH:/root/.local/bin/" && ogc-cite-runner execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 --output-format markdown
 
     # - name: "Test OGC API - Features compliance"
     #   uses: OSGeo/ogc-cite-runner@v0.3.0
@@ -53,3 +53,7 @@ jobs:
     - name: Stop cite-runner
       if: always()
       run: docker stop teamengine && docker rm -f teamengine
+
+    - name: Remove network
+      if: always()
+      run: docker network rm my-shared-network
