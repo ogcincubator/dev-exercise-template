@@ -21,16 +21,25 @@ jobs:
       run: docker network create my-shared-network
 
     - name: Start pygeoapi
-      run: docker compose -f "./apps/pygeoapi/docker-compose.yml" up -d --build
+      run: |
+          docker compose -f "./apps/pygeoapi/docker-compose.yml" \
+          up -d --build
           
     - name: Start teamengine
-      run: docker run -d --name=teamengine --add-host=host.docker.internal:host-gateway --publish=9080:8080 --network=my-shared-network ogccite/teamengine-production:1.0-SNAPSHOT
+      run: |
+        docker run -d --name=teamengine \
+        --add-host=host.docker.internal:host-gateway --publish=9080:8080 \
+         --network=my-shared-network ogccite/teamengine-production:1.0-SNAPSHOT
 
     - name: "Install cite-runner"
       run: pipx install ogc-cite-runner
 
     - name: "Test OGC API - Features compliance"
-      run: export PATH="$PATH:/root/.local/bin/" && ogc-cite-runner execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 --output-format markdown
+      run: |
+        export PATH="$PATH:/root/.local/bin/" && ogc-cite-runner \
+        execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 \
+        --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 \
+        --output-format markdown
 
     - name: Stop containers
       if: always()
