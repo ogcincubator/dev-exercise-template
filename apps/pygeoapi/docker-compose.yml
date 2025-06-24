@@ -10,3 +10,9 @@ services:
     volumes:
       - ./pygeoapi.config.yml:/pygeoapi/local.config.yml # Config file
       - ./data:/data # Pull data from here
+    networks:
+      - my-shared-network
+
+networks:
+     my-shared-network:
+       external: true
