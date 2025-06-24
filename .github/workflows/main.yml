@@ -17,12 +17,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Set environment variable for port
-      run: cat ./apps/pygeoapi/.env >> $GITHUB_ENV
-
-    - name: Check port
-      run: echo $PORT
-
     - name: Create network
       run: docker network create my-shared-network
 
@@ -37,14 +31,6 @@ jobs:
 
     - name: "Test OGC API - Features compliance"
       run: export PATH="$PATH:/root/.local/bin/" && ogc-cite-runner execute-test-suite http://localhost:9080/teamengine ogcapi-features-1.0 --suite-input iut http://pygeoapi:80 --suite-input noofcollections 3 --output-format markdown
-
-    # - name: "Test OGC API - Features compliance"
-    #   uses: OSGeo/ogc-cite-runner@v0.3.0
-    #   with:
-    #     test_suite_identifier: ogcapi-features-1.0
-    #     test_session_arguments:  >-
-    #       iut=http://host.docker.internal:5001 noofcollections=3
-    #       output-format=markdown
 
     - name: Stop containers
       if: always()
