@@ -11,13 +11,13 @@ You can learn more about pygeoapi in the [Diving into pygeoapi Workshop](https:/
 Start the server with:
 
 ```bash
-docker compose --env-file .env up
+docker compose up
 ```
 
 Or, if you want to run it in the background:
 
 ```bash
-docker compose --env-file .env up -d
+docker compose up -d
 ```
 
 The landing page is available at: http://localhost:5001/
