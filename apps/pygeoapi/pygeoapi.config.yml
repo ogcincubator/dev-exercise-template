@@ -23,7 +23,7 @@ logging:
 metadata:
     identification:
         title: OGC API Instance
-        description: pygeoapi instance in support of the OGC APIs for Data Publishers Course
+        description: pygeoapi instance in support of the OGC APIs for Data Publishers Training Course
         keywords:
             - geospatial
             - data
@@ -38,7 +38,7 @@ metadata:
         name: National Mapping and Cadastral Agency
         url: https://fictional.mappingagency.com
     contact:
-        name: Annabel
+        name: Annabel Mwangi
         position: Geospatial Analyst
         address: Mailing Address
         city: City
