@@ -33,11 +33,15 @@ Go to the [`apps`](./apps/) directory and choose one implementation from there. 
 
 ## Submit your assignment
 
-After ensuring the dataset is published with the implementation you selected, commit your results and push them to GitHub to trigger the compliance test action. In order to pass the assignment you need to successfully pass the compliance tests, which means your setup can standup a valid OGC API - Features endpoint.
+After ensuring the dataset is published with the implementation you selected, you would commit your results and push them to GitHub to trigger the compliance test action. In order to pass the assignment you need to successfully pass the compliance tests, which means your setup can standup a valid OGC API - Features endpoint.
+
+**In this assignment you won't need to do any changes to the provided setup, so there is no need to commit and push anything to Github. You can still see the results of the tests provided by the initial action.**
 
 You can check the results of the test, on the `Actions` tab of the repository.
 
 ![Check the output of the GitHub action](./img/github3.png)
+
+![Check the output of the GitHub action](./img/github_action.png)
 
 To submit your work for review by the OGC team, email them the URL of your repository.
 

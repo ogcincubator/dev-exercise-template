@@ -5,7 +5,7 @@ services:
     container_name: pygeoapi
 
     ports:
-      - 5001:80
+      - 80:80
     # env_file: ".env"
     environment:
       - PHOST
