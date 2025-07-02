@@ -9,9 +9,12 @@ Before starting, make sure that:
 - ✅ *You have [Docker](https://docs.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) up and running in your machine.*
 - ✅ *You have access to a command line interface.*
 - ✅ *You have access to a text editor.*
+- ✅ *You have at least 370 MB free disk space.*
 
 ## Implementations 
 
-Select one of the available implementations of OGC API - Features and switch to that folder, to continue the exercise:
+Select one of the available implementations of OGC API - Features and switch to that folder, to continue the exercise. If you choose [pygeoapi](./pygeoapi/):
 
-* [pygeoapi](./pygeoapi/)
+```bash
+cd pygeoapi
+```

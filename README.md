@@ -15,13 +15,13 @@ Go to https://github.com/ogcincubator/dev-exercise-template and create a reposit
 
 ![Create repo on GitHub - step 2](./img/github2.png)
 
-Clone your repository. For instance if your username is `foo` and your repo is named `data-publisher`, you would clone it in the command line interface as follows:
+Clone your repository. Although you can use graphical tools to clone a repository, the rest of this exercise will assume you will use the terminal. For instance if your username is `foo` and your repo is named `data-publisher`, you would clone it in the Command Line Interface (cli) as follows:
 
 ```bash
 git clone https://github.com/foo/data-publisher.git
 ```
 
-Then navigate to that repository. The rest of the exercise will be done in that location.
+Then navigate to that repository:
 
 ```bash
 cd data-publisher
@@ -30,6 +30,12 @@ cd data-publisher
 ## Complete the exercise
 
 Go to the [`apps`](./apps/) directory and choose one implementation from there. Specific instructions to run an OGC API server and publish data using that technology can be found on the implementation's directory.
+
+```bash
+cd apps
+```
+
+**Come back here to check the last steps, after you went through the READMEs on the `apps` and implementation folder, and completed the exercise.**
 
 ## Submit your assignment
 
