@@ -100,3 +100,7 @@ Then save the file and start your pygeoapi server again, with docker compose. Yo
 ```bash
 git checkout .
 ```
+
+## Submit your Assignment
+
+Whether you made changes on the pygeoapi configuration or used the default files, once you checked the server is up & running and everything works, please go back to ["Submit your assignment" section](../../README.md#submit-your-assignment) of the top-level README file, for instructions on how-to submit you assignment.

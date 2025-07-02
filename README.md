@@ -47,6 +47,8 @@ You can check the results of the test, on the `Actions` tab of the repository.
 
 ![Check the output of the GitHub action](./img/github3.png)
 
+Click on the last workflow run and scroll down until you see a job called "Test OGC API - Features Compliance". click on that job to expand the details, which will show you the results of the compliance tests.
+
 ![Check the output of the GitHub action](./img/github_action.png)
 
 To submit your work for review by the OGC team, email them the URL of your repository.
@@ -65,8 +67,10 @@ For instance, if you were testing a pygeoapi implementation:
 act -j pygeoapi
 ```
 
+![Act output on a console](./img/act-output.png)
+
 ## Note about Compliance 🏆
 
-This assignment tests if a server is compliant with OGC API Features - Part 1: Core and OGC API - Features - Part 2: Coordinate Reference Sysgtems by Reference. In order to be compliant, the server needs to pass at least the mandatory tests.
+This assignment tests if a server is compliant with OGC API Features - Part 1: Core and OGC API - Features - Part 2: Coordinate Reference Systems by Reference. In order to be compliant, the server needs to pass at least the mandatory tests. The default setup on the pyegaopi folders should pass 111 of OGC API - Features Part 1 tests (mandatory) and 34 OGC API - Features Part 2 (optional). Some tests may be skipped, but no tests should fail.
 
 The compliance tests use the OSGeo [ogc-cite-runner](https://github.com/OSGeo/ogc-cite-runner) GitHub Action as well as the [TEAM Engine](https://github.com/opengeospatial/teamengine) projects. Find out more about compliance and certification on the [CITE website](https://cite.opengeospatial.org/teamengine).
