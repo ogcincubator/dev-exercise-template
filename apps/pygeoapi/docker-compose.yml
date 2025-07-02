@@ -6,7 +6,6 @@ services:
 
     ports:
       - 5001:80
-    # env_file: ".env"
     environment:
       - PHOST
     volumes:
