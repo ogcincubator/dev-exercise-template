@@ -51,7 +51,7 @@ Click on the last workflow run and scroll down until you see a job called "Test 
 
 ![Check the output of the GitHub action](./img/github_action.png)
 
-To submit your work for review by the OGC team, email them[✉️](mailto:training@ogc.org) the URL of your repository. Then go back to the e-learning system to end the course ✅.
+To submit your work for review by the OGC team, email them [✉️](mailto:training@ogc.org) the URL of your repository. Then go back to the e-learning system to end the course ✅.
 
 ### Troubleshooting
 
