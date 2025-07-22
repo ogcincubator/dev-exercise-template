@@ -29,7 +29,7 @@ jobs:
          --network=my-shared-network ogccite/teamengine-production:1.0-SNAPSHOT
 
     - name: "Install cite-runner"
-      run: pipx install ogc-cite-runner
+      run: pipx install ogc-cite-runner==0.3.0
 
     - name: "Test OGC API - Features compliance"
       run: |
