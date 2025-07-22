@@ -1,6 +1,6 @@
 services:
   pygeoapi:
-    image: geopython/pygeoapi:latest
+    image: geopython/pygeoapi:0.20.0
 
     container_name: pygeoapi
 
