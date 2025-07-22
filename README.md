@@ -71,6 +71,6 @@ act -j pygeoapi
 
 ## Note about Compliance 🏆
 
-This assignment tests if a server is compliant with OGC API Features - Part 1: Core and OGC API - Features - Part 2: Coordinate Reference Systems by Reference. In order to be compliant, the server needs to pass at least the mandatory tests. The default setup on the pyegaopi folders should pass 111 of OGC API - Features Part 1 tests (mandatory) and 34 OGC API - Features Part 2 (optional). Some tests may be skipped, but no tests should fail.
+This assignment tests if a server is compliant with OGC API Features - Part 1: Core and OGC API - Features - Part 2: Coordinate Reference Systems by Reference. In order to be compliant, the server needs to pass at least the mandatory tests. The default setup on the pyegaopi folders should pass 111 of OGC API - Features Part 1 tests (mandatory) and 37 OGC API - Features Part 2 (optional). Some tests may be skipped, but no tests should fail.
 
 The compliance tests use the OSGeo [ogc-cite-runner](https://github.com/OSGeo/ogc-cite-runner) GitHub Action as well as the [TEAM Engine](https://github.com/opengeospatial/teamengine) projects. Find out more about compliance and certification on the [CITE website](https://cite.opengeospatial.org/teamengine).
