@@ -4,7 +4,7 @@ This repository contains the necessary files to standup an implementation of pyg
 
 [pygeoapi](https://pygeoapi.io/) is a Python server implementation of the OGC API suite of standards. It is a Reference Implementation for OGC API - Features, OGC API - Tiles and OGC API - Environmental Data Retrieval, and compliance certified for OGC API - Processes.
 
-You can learn more about pygeoapi in the [Diving into pygeoapi Workshop](https://dive.pygeoapi.io/).
+You can learn more about pygeoapi, including how-to use provider plugins to ingest different data formats, in the [Diving into pygeoapi Workshop](https://dive.pygeoapi.io/).
 
 ## Quick-Start
 
